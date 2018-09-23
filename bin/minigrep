@@ -1,0 +1,12 @@
+#! /usr/bin/env perl6
+
+use App::Minigrep;
+
+sub MAIN(Str:D $search-string, Str:D $file-name) {
+    minigrep($search-string, $file-name);
+}
+
+sub USAGE {
+    put "Minigrep requires you to enter a string you want to search for, and the file you want to search";
+    put "Example: minigrep horses poetry.txt  // this will search for the string horses in ./poetry.txt file";
+}
